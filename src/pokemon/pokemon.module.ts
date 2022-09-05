@@ -5,7 +5,7 @@ import { PokemonController } from './pokemon.controller';
 
 import { Pokemon, PokemonSchema } from './entities/pokemon.entity';
 import { ConfigModule } from '@nestjs/config';
-import { CommonModule } from 'src/common/common.module';
+import { CommonModule } from '../common/common.module';
 
 @Module({
   controllers: [PokemonController],
