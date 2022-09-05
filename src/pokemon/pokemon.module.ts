@@ -5,6 +5,7 @@ import { PokemonController } from './pokemon.controller';
 
 import { Pokemon, PokemonSchema } from './entities/pokemon.entity';
 import { ConfigModule } from '@nestjs/config';
+import { CommonModule } from 'src/common/common.module';
 
 @Module({
   controllers: [PokemonController],
@@ -12,6 +13,7 @@ import { ConfigModule } from '@nestjs/config';
   imports: [
     ConfigModule,
     MongooseModule.forFeature([{ name: Pokemon.name, schema: PokemonSchema }]),
+    CommonModule,
   ],
   exports: [MongooseModule],
 })
